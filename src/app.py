@@ -112,6 +112,9 @@ class PdfImageExtractorApp:
         log_scrollbar.grid(row=0, column=1, sticky="ns")
         self.log_text.configure(yscrollcommand=log_scrollbar.set)
 
+        credit_label = ttk.Label(self.root, text="made by jngsngjn")
+        credit_label.grid(row=8, column=0, padx=16, pady=(0, 10), sticky="e")
+
     def _setup_drag_and_drop(self) -> None:
         if not TkinterDnD or not DND_FILES:
             self._append_log("tkinterdnd2가 설치되지 않아 드래그 앤 드롭은 비활성화됩니다.")
